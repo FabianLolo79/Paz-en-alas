@@ -11,6 +11,15 @@ public class EnemyPatrol : MonoBehaviour
     public float waitingTime = 2f;
 
     private GameObject _target;
+    private Rigidbody2D _rigidbody;
+    private Animator _animator;
+
+
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +32,11 @@ public class EnemyPatrol : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void LateUpdate()
+    {
+        //_animator.SetBool("Idle",);
     }
 
     private void UpdateTarget()
@@ -54,7 +68,12 @@ public class EnemyPatrol : MonoBehaviour
     {
         // Coroutine to move enemy
         while (Vector2.Distance(transform.position, _target.transform.position) > 0.05f)
-        {   //let큦 move to the target
+        {
+            //Update animator
+            _animator.SetBool("Walk", true);
+            _animator.SetBool("Idle", false);
+            
+            //let큦 move to the target
             Vector2 direction = _target.transform.position - transform.position;
             float xDirection = direction.x;
 
@@ -67,6 +86,11 @@ public class EnemyPatrol : MonoBehaviour
         //At this point, i큩e reached the target, let큦 set our position to the target큦 one
         Debug.Log("Target reached");
         transform.position = new Vector2(_target.transform.position.x, transform.position.y);
+        UpdateTarget();
+
+        //Update animator
+        _animator.SetBool("Idle", true);
+        _animator.SetBool("Walk", false);
 
         // And let큦 wait for a moment
         Debug.Log("Waiting for " + waitingTime + " seconds");
@@ -74,7 +98,6 @@ public class EnemyPatrol : MonoBehaviour
 
         //onve waited, let큦 restore the patrol behaviour
         Debug.Log("Waited enough, let큦 update the target and move again");
-        UpdateTarget();
         StartCoroutine("PatrolToTarget");
     }
 }
