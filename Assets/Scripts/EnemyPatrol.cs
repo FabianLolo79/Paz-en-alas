@@ -8,7 +8,7 @@ public class EnemyPatrol : MonoBehaviour
     public float speed = 1f;
     public float minX;
     public float maxX;
-    public float waitingTime = 2f;
+    public float waitingTime = 5f;
 
     private GameObject _target;
     private Rigidbody2D _rigidbody;
@@ -91,6 +91,7 @@ public class EnemyPatrol : MonoBehaviour
         //Update animator
         _animator.SetBool("Idle", true);
         _animator.SetBool("Walk", false);
+        _animator.SetBool("Attack", true);
 
         // And let´s wait for a moment
         Debug.Log("Waiting for " + waitingTime + " seconds");
