@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed = 2f;
 
@@ -43,5 +43,11 @@ public class PlayerController : MonoBehaviour
     {
         _animator.SetBool("Idle", _movement == Vector2.zero);
         _animator.SetBool("Walk", _movement != Vector2.zero);
+    }
+
+    private void OnCollisionEnter2D()
+    {
+        
+        Destroy(gameObject);
     }
 }
