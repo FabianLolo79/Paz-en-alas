@@ -45,9 +45,20 @@ public class Player : MonoBehaviour
         _animator.SetBool("Walk", _movement != Vector2.zero);
     }
 
-    private void OnCollisionEnter2D()
+    //private void OnCollisionEnter2D()
+    //{
+    //    if ()
+    //    {
+    //        Destroy(gameObject);
+    //    }
+
+    //}
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        
-        Destroy(gameObject);
+        if (!collision.gameObject.CompareTag("Ground"))
+        {
+            this.gameObject.SetActive(false);
+            //Destroy(gameObject);
+        }
     }
 }
