@@ -304,7 +304,6 @@ GameObject:
   - component: {fileID: 3641457529569522326}
   - component: {fileID: 8663837082806047098}
   - component: {fileID: 8792034247058764868}
-  - component: {fileID: 6641646481855270327}
   - component: {fileID: 3239626784326440235}
   - component: {fileID: 7405349794101634685}
   - component: {fileID: 989021814277049736}
@@ -403,29 +402,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6641646481855270327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6722443423217609144}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7ca2a2ef51731540b27032a9133ee5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.8
-  waitTime: 1.5
-  waypoints:
-  - {fileID: 2156062341260385666}
-  - {fileID: 4306560091195143010}
-  - {fileID: 5363126862001588539}
-  - {fileID: 1192627942414987248}
-  - {fileID: 0}
-  - {fileID: 4290204078729478991}
-  isWaiting: 0
-  currentWaypoint: 0
 --- !u!114 &3239626784326440235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -438,7 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469d6c95a10c83549a28293210685e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
   player: {fileID: 0}
 --- !u!50 &7405349794101634685
 Rigidbody2D:
