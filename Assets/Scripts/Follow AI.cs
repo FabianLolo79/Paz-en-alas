@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class FollowAI : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    //[SerializeField] private float speed;
 
     [SerializeField] private Transform player;
 
-    private bool _isFacingLeft = true;
+    private bool _isFacingLeft;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class FollowAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.position,speed * Time.deltaTime );
+       // transform.position = Vector2.MoveTowards(transform.position, player.position,speed * Time.deltaTime );
 
         bool _isPlayerLeft = transform.position.x > player.transform.position.x;
         Flip(_isPlayerLeft);

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OneWayPlatform : MonoBehaviour
@@ -33,12 +34,22 @@ public class OneWayPlatform : MonoBehaviour
             else
             {
                 waitTime -= Time.deltaTime;
+                
             }
+            
         }
 
         if (Input.GetAxisRaw("Vertical") == 1)
         {
             effector2D.rotationalOffset = 0;
         }
+        /*if (!Input.GetButtonDown("S"))
+        {
+            effector2D.rotationalOffset = 0;
+        }*/ 
+        //revisar
+
+
     }
+
 }

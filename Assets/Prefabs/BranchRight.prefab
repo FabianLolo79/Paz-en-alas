@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6080771686850513190}
   - component: {fileID: 154779760742634039}
   - component: {fileID: -5962916587802306776}
-  - component: {fileID: 5828307171345935437}
+  - component: {fileID: -2503944167706019210}
   m_Layer: 0
   m_Name: BranchRight
   m_TagString: Untagged
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331894379220277058}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.046, y: 0.411, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6080771686850513190
 SpriteRenderer:
@@ -95,6 +95,7 @@ EdgeCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331894379220277058}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 635150ac8e112534d8bb877e85a1a24b, type: 2}
   m_IncludeLayers:
@@ -118,7 +119,8 @@ EdgeCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
@@ -147,7 +149,7 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &5828307171345935437
+--- !u!114 &-2503944167706019210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,7 +158,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1331894379220277058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f4154fea789b944b2f5f955b4f1c60, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b83ef48801102f4b8a481dee7c04bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0

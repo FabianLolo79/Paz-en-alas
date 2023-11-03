@@ -18,7 +18,9 @@ public class Collectibles : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && _animator.GetCurrentAnimatorStateInfo(0).IsTag("CanEat"))
         {
+            
             _animator.SetTrigger("Eat");
+
             collision.SendMessageUpwards("AddEnergy", 100);
         }
     }
